@@ -29,7 +29,7 @@ const TruckItem = ({ truck }) => {
         <div className={css.name_wrapper}>
           <h2 className={css.name_title}>{truck.name}</h2>
           <div className={css.favourite_wrapper}>
-            <p>{`€ ${Number(truck.price).toFixed(2)}`}</p>
+            <p>{`€${Number(truck.price).toFixed(2)}`}</p>
             <svg
               width="26"
               height="24"
@@ -59,4 +59,3 @@ const TruckItem = ({ truck }) => {
   )
 }
 export default TruckItem
-

@@ -3,6 +3,7 @@ import { selectFavourites } from "../../redux/favourites/selectors";
 import { selectTrucks } from "../../redux/truck/selectors";
 import TruckList from "../../components/TruckList/TruckList";
 import css from "./FavouritePage.module.css"
+import HelmetTitle from "../../components/HelmetTitle";
 
 const FavouritePage = () => {
     const favourites = useSelector(selectFavourites);
@@ -10,10 +11,12 @@ const FavouritePage = () => {
     const favouriteTrucks = allTrucks.filter(truck => favourites.includes(truck.id));
 
     return (
-        <div className={css.favourite_wrapper}>
-            <h2 className={css.favourite_title}>Your Favourites</h2>
-            <div className={css.favourite_list}><TruckList filteredTrucks={favouriteTrucks} /></div>
-        </div>
+        <>
+            <HelmetTitle title="Favourites" description="Favourite Trucks" />
+            <div className={css.favourite_wrapper}>
+                <div className={css.favourite_list}><TruckList filteredTrucks={favouriteTrucks} /></div>
+            </div>
+        </>
     )
 }
 

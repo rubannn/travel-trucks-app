@@ -1,13 +1,12 @@
-import { Helmet } from 'react-helmet-async'
-import MainInfo from '../../components/MainInfo/MainInfo'
+import HelmetTitle from "../../components/HelmetTitle";
+import MainInfo from "../../components/MainInfo/MainInfo";
+
 const HomePage = () => {
-    return (
-      <>
-        <Helmet>
-            <title>Home Page</title>
-        </Helmet>
-        <MainInfo/>
-      </>
+  return (
+    <>
+      <HelmetTitle title="Home Page" />
+      <MainInfo />
+    </>
   )
 }
 

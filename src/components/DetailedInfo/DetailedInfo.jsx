@@ -30,7 +30,7 @@ const DetailedInfo = () => {
             </svg> {truck.location}
           </div>
 
-          <p className={css.name_title}>{`€ ${Number(truck.price).toFixed(2)}`}</p>
+          <p className={css.name_title}>{`€${Number(truck.price).toFixed(2)}`}</p>
         </div>
 
         {truck.gallery.length > 0 ? (

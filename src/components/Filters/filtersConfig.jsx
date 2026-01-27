@@ -6,8 +6,8 @@ export const LOCATION_FILTER = {
   icon: "#Map",
 };
 
-export const FEATURES_FILTER = {
-  name: "features",
+export const VEQUIPMENT_FILTER = {
+  name: "v-equipment",
   type: "checkbox",
   title: "Vehicle equipment",
   options: [
@@ -19,8 +19,8 @@ export const FEATURES_FILTER = {
   ],
 };
 
-export const FORM_FILTER = {
-  name: "form",
+export const VTYPE_FILTER = {
+  name: "v-type",
   type: "radio",
   title: "Vehicle type",
   options: [
@@ -30,4 +30,4 @@ export const FORM_FILTER = {
   ],
 };
 
-export const FILTERS_CONFIG = [LOCATION_FILTER, FEATURES_FILTER, FORM_FILTER];
+export const FILTERS_CONFIG = [LOCATION_FILTER, VEQUIPMENT_FILTER, VTYPE_FILTER];
