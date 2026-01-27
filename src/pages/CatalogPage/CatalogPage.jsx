@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchTrucks } from "../../redux/truck/operations";
 import TruckList from "../../components/TruckList/TruckList";
 import Filters from "../../components/Filters/Filters";
-import css from "./CatalogPage.module.css"
 import { selectFilteredTrucks } from "../../redux/filters/selectors";
 import { isLoading } from "../../redux/truck/selectors";
 
+import css from "./CatalogPage.module.css"
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -32,17 +32,20 @@ const CatalogPage = () => {
         <title>Catalog Page</title>
       </Helmet>
       <div className="container">
-        <section className={css.catalog_container}>
+        <div className={css.catalog_container}>
           <Filters />
-          <TruckList filteredTrucks={filteredTrucks.slice(0, visibleCount)} />
-        </section>
-        {!loading && visibleCount < filteredTrucks.length && (
-          <button className={css.search_button} type="button" onClick={onClickButton}>
-            Load more
-          </button>
-        )}
-      </div>
+          <div className={css.list_column}>
+            <TruckList filteredTrucks={filteredTrucks.slice(0, visibleCount)} />
+            {!loading && visibleCount < filteredTrucks.length && (
 
+              <button className={css.search_button} type="button" onClick={onClickButton}>
+                Load more
+              </button>
+
+            )}
+          </div>
+        </div>
+      </div>
     </>
   )
 }

@@ -1,7 +1,17 @@
-.catalog_container{
+.catalog_container {
     padding: 48px 64px;
-    display:flex;
-    gap:64px;
+    display: flex;
+    gap: 64px;
+}
+
+.list_column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.button_wrapper {
+    margin-top: 8px;
 }
 
 .search_button {
@@ -18,7 +28,7 @@
     letter-spacing: -0.01em;
     color: var(--main);
     border: 1px solid var(--gray-light);
-    margin:0 auto 52px;
+    margin: 0 auto 52px;
 }
 
 .search_button:hover {
