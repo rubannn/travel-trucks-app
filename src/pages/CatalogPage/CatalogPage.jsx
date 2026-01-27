@@ -14,13 +14,14 @@ const CatalogPage = () => {
   const filteredTrucks = useSelector(selectFilteredTrucks);
   const loading = useSelector(isLoading);
   const [visibleCount, setVisibleCount] = useState(4);
+
   useEffect(() => {
     dispatch(fetchTrucks());
   }, [dispatch]);
 
-  useEffect(() => {
+  const handleFilterChange = () => {
     setVisibleCount(4);
-  }, [filteredTrucks]);
+  };
 
   const onClickButton = () => {
     setVisibleCount((prevCount) => prevCount + 4);
@@ -31,7 +32,7 @@ const CatalogPage = () => {
       <HelmetTitle title="Catalog Page" />
       <div className="container">
         <div className={css.catalog_container}>
-          <Filters />
+          <Filters onFilterChange={handleFilterChange} />
           <div className={css.list_column}>
             <TruckList filteredTrucks={filteredTrucks.slice(0, visibleCount)} />
 

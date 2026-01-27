@@ -13,7 +13,7 @@ const buildInitialValues = (filters, config) =>
     return acc;
   }, {});
 
-const Filters = () => {
+const Filters = ({ onFilterChange }) => {
   const dispatch = useDispatch();
   const filters = useSelector(selectFilters);
 
@@ -21,7 +21,10 @@ const Filters = () => {
     <div className={css.filter_wrapper}>
       <Formik
         initialValues={buildInitialValues(filters, FILTERS_CONFIG)}
-        onSubmit={(values) => dispatch(changeFilter(values))}
+        onSubmit={(values) => {
+          dispatch(changeFilter(values));
+          onFilterChange();
+        }}
       >
         <Form>
           {FILTERS_CONFIG.map((filter) => (
