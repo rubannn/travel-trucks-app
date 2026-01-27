@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectTruck } from '../../redux/truck/selectors';
 import icons from '../../assets/sprite.svg';
 import clsx from "clsx"
-import { Navigate, NavLink, Route, Routes } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import TruckFeatures from '../TruckFeatures/TruckFeatures';
 import TruckReviews from '../TruckReviews/TruckReviews';
 
@@ -52,11 +52,7 @@ const DetailedInfo = () => {
           <li className={css.details_item}><NavLink className={activeLink} to="features">Features</NavLink></li>
           <li className={css.details_item}><NavLink className={activeLink} to="reviews">Reviews</NavLink></li>
         </ul>
-        <Routes>
-          <Route path="" element={<Navigate to="features" />} />
-          <Route path="features" element={<TruckFeatures />}></Route>
-          <Route path="reviews" element={<TruckReviews />}></Route>
-        </Routes>
+        <Outlet />
       </div>
     </>
   )

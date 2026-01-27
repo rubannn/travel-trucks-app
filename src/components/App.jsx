@@ -3,6 +3,8 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout/Layout'
 import Loader from './Loader/Loader';
+import TruckFeatures from '../components/TruckFeatures/TruckFeatures';
+import TruckReviews from '../components/TruckReviews/TruckReviews';
 
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('../pages/CatalogPage/CatalogPage'));
@@ -18,7 +20,11 @@ function App() {
           <Route path='/' element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path='/catalog' element={<CatalogPage />}></Route>
-            <Route path='/catalog/:id/*' element={<DetailsPage />}></Route>
+            <Route path='/catalog/:id' element={<DetailsPage />}>
+              <Route index element={<TruckFeatures />} />
+              <Route path='features' element={<TruckFeatures />} />
+              <Route path='reviews' element={<TruckReviews />} />
+            </Route>
             <Route path='/favourites' element={<FavouritePage />}></Route>
             <Route path='*' element={<NotFoundPage />}></Route>
           </Route>
