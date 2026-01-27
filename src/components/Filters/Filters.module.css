@@ -1,6 +1,5 @@
-
-.filter_wrapper{
-    display:flex;
+.filter_wrapper {
+    display: flex;
     flex-direction: column;
 }
 
@@ -23,11 +22,11 @@
     background-color: var(--button-hover);
 }
 
-.errorMessage{
-    color:var(--button);
+.errorMessage {
+    color: var(--button);
 }
 
-.filter_title{
+.filter_title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -38,19 +37,19 @@
 .input_wrapper {
     position: relative;
     display: flex;
-    margin-bottom:40px;
+    margin-bottom: 40px;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.input_location{
+.input_location {
     border-radius: 12px;
     padding: 18px 48px 18px 48px;
     width: 360px;
     height: 56px;
     background-color: var(--inputs);
-    border:none;
-    
+    border: none;
+
 }
 
 .input_location::placeholder {
@@ -68,12 +67,12 @@
     pointer-events: none;
 }
 
-.equipment_title{
+.equipment_title {
     font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
     color: var(--main);
-    margin-top:32px;
+    margin-top: 32px;
     position: relative;
 }
 
@@ -88,18 +87,19 @@
     background-color: var(--gray-light);
 }
 
-.group_wrapper{
+.group_wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top:48px;
-    max-width:360px;
+    margin-top: 48px;
+    max-width: 360px;
 }
 
 .group_wrapper p {
     border: 1px solid var(--gray-light);
     border-radius: 12px;
     width: 112px;
+    padding: 8px;
     height: 96px;
     cursor: pointer;
     display: flex;
