@@ -15,5 +15,4 @@ const MainInfo = () => {
   )
 }
 
-
 export default MainInfo

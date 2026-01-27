@@ -66,4 +66,6 @@ img {
   padding: 0 64px;
   /* match header horizontal padding */
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }

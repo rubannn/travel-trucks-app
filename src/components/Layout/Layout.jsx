@@ -8,8 +8,10 @@ const Layout = () => {
    return (
       <>
          <header className={css.header}>
-            <Logo />
-            <Navigation />
+            <div className="container header_inner">
+               <Logo />
+               <Navigation />
+            </div>
          </header>
          <main>
             <Outlet />
