@@ -36,12 +36,11 @@ const CatalogPage = () => {
           <Filters />
           <div className={css.list_column}>
             <TruckList filteredTrucks={filteredTrucks.slice(0, visibleCount)} />
+            
             {!loading && visibleCount < filteredTrucks.length && (
-
               <button className={css.search_button} type="button" onClick={onClickButton}>
                 Load more
               </button>
-
             )}
           </div>
         </div>

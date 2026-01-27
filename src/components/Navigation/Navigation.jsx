@@ -13,6 +13,7 @@ const Navigation = () => {
       <nav className={css.nav}>
         <NavLink to='/' className={activeLinkClass}>Home</NavLink>
         <NavLink to='/catalog' className={activeLinkClass}>Catalog</NavLink>
+        <NavLink to='/favourites' className={activeLinkClass}>Favourites</NavLink>
       </nav>
     </>
   )
