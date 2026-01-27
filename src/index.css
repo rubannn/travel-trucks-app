@@ -9,6 +9,10 @@
   --button: #e44848;
   --button-hover: #d84343;
   --rating: #ffc531;
+  --header-height: 72px;
+  /* used by pages that need viewport minus header */
+  --header-top: 24px;
+  /* used for header top padding */
 }
 
 body {

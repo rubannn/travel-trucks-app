@@ -24,15 +24,15 @@
     max-width: 360px;
 }
 
-.gallery{
+.gallery {
     display: flex;
-    gap:48px;
+    gap: 48px;
     flex-wrap: wrap;
-    margin:28px 0px;
-    
+    margin: 28px 0px;
+
 }
 
-.photo{
+.photo {
     border-radius: 10px;
     width: 292px;
     height: 312px;
@@ -46,9 +46,9 @@
     color: var(--text);
 }
 
-.details_list{
+.details_list {
     display: flex;
-    gap:40px;
+    gap: 40px;
     font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
@@ -80,3 +80,20 @@
 }
 
 
+.header {
+    display: flex;
+    gap: 28px;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    gap: 44px;
+    flex-direction: column;
+}
+
+.nameRow {
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+}

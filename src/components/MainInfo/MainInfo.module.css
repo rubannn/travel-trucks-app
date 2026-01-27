@@ -1,24 +1,28 @@
-.main_container{
+.main_container {
     background-image: url('../../assets/images/hero_image-min.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 696px;
+    background-position: 50% 50%;
+    width: 100%;
+    min-height: calc(100vh - var(--header-height) - 2 * var(--header-top));
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 64px;
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-            background-image: url('../../assets/images/hero_image_2x-min.png');
-        }
-}
- 
-.main_wrapper{
-max-width: 571px;  
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('../../assets/images/hero_image_2x-min.png');
+    }
 }
 
-.main_title{
+.main_wrapper {
+    max-width: 571px;
+    min-height: 100%;
+}
+
+.main_title {
     font-weight: 600;
     font-size: 48px;
     line-height: 0.67;
@@ -34,7 +38,7 @@ max-width: 571px;
     margin-bottom: 40px;
 }
 
-.main_button{
+.main_button {
     border-radius: 200px;
     width: 173px;
     height: 56px;
@@ -48,6 +52,6 @@ max-width: 571px;
     color: var(--white);
 }
 
-.main_button:hover{
+.main_button:hover {
     background-color: var(--button-hover);
 }
