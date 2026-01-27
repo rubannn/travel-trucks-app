@@ -23,9 +23,11 @@ const DetailsPage = () => {
                 <title>Details Page</title>
             </Helmet>
             <Toaster position="top-center" reverseOrder={false} />
-            <div className={css.wrapper} >
-                <div className={css.detailed_container} >
-                    <DetailedInfo />
+            <div className="container">
+                <div className={css.wrapper} >
+                    <div className={css.detailed_container} >
+                        <DetailedInfo />
+                    </div>
                 </div>
             </div>
         </>

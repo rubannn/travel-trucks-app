@@ -31,15 +31,17 @@ const CatalogPage = () => {
       <Helmet>
         <title>Catalog Page</title>
       </Helmet>
-      <section className={css.catalog_container}>
-        <Filters />
-        <TruckList filteredTrucks={filteredTrucks.slice(0, visibleCount)} />
-      </section>
-      {!loading && visibleCount < filteredTrucks.length && (
-        <button className={css.search_button} type="button" onClick={onClickButton}>
-          Load more
-        </button>
-      )}
+      <div className="container">
+        <section className={css.catalog_container}>
+          <Filters />
+          <TruckList filteredTrucks={filteredTrucks.slice(0, visibleCount)} />
+        </section>
+        {!loading && visibleCount < filteredTrucks.length && (
+          <button className={css.search_button} type="button" onClick={onClickButton}>
+            Load more
+          </button>
+        )}
+      </div>
 
     </>
   )

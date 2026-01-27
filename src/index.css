@@ -57,3 +57,13 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* Global page container used across pages to center content */
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 64px;
+  /* match header horizontal padding */
+  box-sizing: border-box;
+}
