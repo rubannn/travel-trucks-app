@@ -20,11 +20,11 @@ export const selectFilteredTrucks = createSelector(
 
     // console.log("formFilter from state:", formFilter);
     // console.log("featuresFilter from state:", featuresFilter);
+    // console.log("FILTERS:", {
+    //   loc,
+    //   feats,
+    // });
 
-    console.log("FILTERS:", {
-      loc,
-      feats,
-    });
     return trucks.filter((truck) => {
       const truckLocation = (truck.location || "").toLowerCase();
       const matchesLocation = truckLocation.includes(loc);
