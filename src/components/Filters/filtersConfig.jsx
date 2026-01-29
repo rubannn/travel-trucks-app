@@ -7,7 +7,7 @@ export const LOCATION_FILTER = {
 };
 
 export const VEQUIPMENT_FILTER = {
-  name: "v-equipment",
+  name: "features",
   type: "checkbox",
   title: "Vehicle equipment",
   options: [
@@ -20,7 +20,7 @@ export const VEQUIPMENT_FILTER = {
 };
 
 export const VTYPE_FILTER = {
-  name: "v-type",
+  name: "form",
   type: "radio",
   title: "Vehicle type",
   options: [
