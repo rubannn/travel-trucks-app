@@ -1,6 +1,6 @@
 import './App.css'
 import { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Layout from './Layout/Layout'
 import Loader from './Loader/Loader';
 import TruckFeatures from '../components/TruckFeatures/TruckFeatures';
@@ -21,7 +21,7 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path='/catalog' element={<CatalogPage />}></Route>
             <Route path='/catalog/:id' element={<DetailsPage />}>
-              <Route index element={<TruckFeatures />} />
+              <Route index element={<Navigate to="features" replace />} />
               <Route path='features' element={<TruckFeatures />} />
               <Route path='reviews' element={<TruckReviews />} />
             </Route>

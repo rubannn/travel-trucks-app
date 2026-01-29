@@ -3,8 +3,6 @@ import { selectTruck } from '../../redux/truck/selectors';
 import icons from '../../assets/sprite.svg';
 import clsx from "clsx"
 import { NavLink, Outlet } from 'react-router-dom';
-import TruckFeatures from '../TruckFeatures/TruckFeatures';
-import TruckReviews from '../TruckReviews/TruckReviews';
 
 import css from './DetailedInfo.module.css'
 

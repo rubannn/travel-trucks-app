@@ -51,7 +51,7 @@ const TruckItem = ({ truck }) => {
         </div>
         <p className={css.item_description}>{`${truck.description.substring(0, 60)}` + "..."}</p>
         <Features truck={truck} />
-        <Link to={`/catalog/${truck.id}`} target="_blank" rel="noopener noreferrer">
+        <Link to={`/catalog/${truck.id}`}>
           <button type='button' className={css.item_button}>Show more</button>
         </Link>
       </div>
