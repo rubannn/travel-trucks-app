@@ -15,7 +15,7 @@ export const VEQUIPMENT_FILTER = {
     { key: "transmission", label: "Automatic", svg: "diagram", value: "automatic" },
     { key: "kitchen", label: "Kitchen", svg: "cup-hot", value: "kitchen", },
     { key: "TV", label: "TV", svg: "tv", value: "TV", },
-    { key: "bathroom", label: "Bathroom", svg: "water", value: "bathroom", },
+    { key: "bathroom", label: "Bathroom", svg: "bath", value: "bathroom", },
   ],
 };
 
