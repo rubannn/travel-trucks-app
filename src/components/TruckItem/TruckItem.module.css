@@ -50,9 +50,10 @@
     text-decoration-skip-ink: none;
     text-underline-offset: 2px;
     margin-right: 16px;
+    color: black;
 }
 
-.item_description{  
+.item_description{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -64,7 +65,7 @@
    flex-direction: column;
    width: 100%;
    justify-content: space-between;
-} 
+}
 
 .item_button {
     border-radius: 200px;

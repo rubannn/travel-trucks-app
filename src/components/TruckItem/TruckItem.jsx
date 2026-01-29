@@ -1,11 +1,12 @@
 
 import { Link } from "react-router-dom"
-import css from "./TruckItem.module.css"
 import icons from '../../assets/sprite.svg';
 import Features from "../Features/Features";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFavourites } from "../../redux/favourites/selectors";
 import { toggleFavourite } from "../../redux/favourites/slice";
+
+import css from "./TruckItem.module.css"
 
 const TruckItem = ({ truck }) => {
   const dispatch = useDispatch();
@@ -44,7 +45,9 @@ const TruckItem = ({ truck }) => {
           <svg width="16" height="16">
             <use href={`${icons}#icon-Rating`} />
           </svg>
-          <p className={css.reviews}>{truck.rating} ({truck.reviews.length} Reviews)</p>
+          <Link className={css.reviews} to={`/catalog/${truck.id}/reviews`}>
+            {truck.rating} ({truck.reviews.length} Reviews)
+          </Link>
           <svg width="20" height="20">
             <use href={`${icons}#Map`} />
           </svg> {truck.location}
