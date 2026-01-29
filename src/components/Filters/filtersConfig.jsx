@@ -11,9 +11,9 @@ export const VEQUIPMENT_FILTER = {
   type: "checkbox",
   title: "Vehicle equipment",
   options: [
+    { key: "AC", label: "AC", svg: "ac", value: "AC", },
     { key: "transmission", label: "Automatic", svg: "diagram", value: "automatic" },
     { key: "kitchen", label: "Kitchen", svg: "cup-hot", value: "kitchen", },
-    { key: "AC", label: "AC", svg: "ac", value: "AC", },
     { key: "TV", label: "TV", svg: "tv", value: "TV", },
     { key: "bathroom", label: "Bathroom", svg: "water", value: "bathroom", },
   ],
