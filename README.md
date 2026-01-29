@@ -1,16 +1,63 @@
-# React + Vite
+# travel-trucks-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal SPA built with React + Vite (SWC). An application for browsing truck cards with details, a gallery, specifications, and reviews.
 
-Currently, two official plugins are available:
+## Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Requirements:
+- Node.js (recommended 16+)
 
-## React Compiler
+Install and run:
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Build and preview:
+```bash
+npm run build
+npm run preview
+```
 
-## Expanding the ESLint configuration
+Lint check:
+```bash
+npm run lint
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## About the Project
+
+- Technologies: React, Vite, @vitejs/plugin-react-swc, React Router, Redux.
+- Entry points: `src/main.jsx`, `src/App.jsx`.
+- Routing: routes are configured in `src/App.jsx`:
+  - `/` — home
+  - `/catalog` — list
+  - `/catalog/:id` — details (nested routes `features` and `reviews`, with a default redirect to `features`)
+  - `/favourites`
+  - `*` — 404
+
+## Structure (key directories)
+
+- `src/` — React source code (components, pages, redux, assets)
+  - `src/components` — UI components
+  - `src/pages` — application pages
+  - `src/assets` — images and SVGs (imported as modules)
+- `public/` — static files available from the root (`/`)
+
+## Conventions
+
+- Use ESM imports/exports.
+- Static files that must remain unchanged and be directly accessible should be placed in `public/` and referenced via `/name`.
+- Component-level CSS should be placed next to the component.
+- After changes, run `npm run dev` and check HMR and the console.
+
+## Useful Files
+
+- `vite.config.js` — Vite configuration (SWC React plugin).
+- `eslint.config.js` — ESLint rules.
+- `package.json` — scripts and dependencies.
+
+## Notes for Developers
+
+- By default, on the details page (route `/catalog/:id`), the index nested route performs a Navigate to `features` — see `src/App.jsx`.
+- When adding images/assets, place them in `src/assets` so they are processed by the bundler.
+- Before committing: use short and clear commit messages (for example: `feat(details): add gallery preview`).
